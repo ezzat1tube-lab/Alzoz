@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI ZOZ SYSTEM</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <canvas id="bg"></canvas>
+
+  <main class="center">
+    <div class="card">
+      <h1 id="neon">AI ZOZ SYSTEM</h1>
+      {% if logged %}
+        <p class="subtitle">Welcome back, {{ user }} 🚀</p>
+        <a href="/logout" class="btn">Logout</a>
+      {% else %}
+        <p class="subtitle">🚀 Welcome in AI ZOZ</p>
+        <div class="controls">
+          <button id="openLogin" class="btn">Login</button>
+        </div>
+      {% endif %}
+      <div class="status" id="status"></div>
+    </div>
+  </main>
+
+  <!-- Login Modal -->
+  <div class="modal" id="loginModal">
+    <div class="modal-card">
+      <h2>🔐 Login</h2>
+      <input id="loginUser" placeholder="Username" />
+      <input id="loginPass" type="password" placeholder="Password" />
+      <div class="modal-actions">
+        <button id="doLogin" class="btn">Enter</button>
+        <button id="closeLogin" class="btn outline">Cancel</button>
+      </div>
+      <div class="modal-msg" id="loginMsg"></div>
+    </div>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>

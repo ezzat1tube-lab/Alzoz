@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI ZOZ Dashboard</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <canvas id="bg"></canvas>
+
+  <div class="dashboard">
+    <div class="dash-header">
+      <h1 class="neon">Welcome 🤖</h1>
+      <a href="/logout" class="btn logout">Logout</a>
+    </div>
+
+    <div class="dash-grid">
+      <div class="dash-card glow">
+        <h2>🧠 AI Module</h2>
+        <p>Explore smart predictions and learning models.</p>
+      </div>
+
+      <div class="dash-card glow">
+        <h2>📊 Analytics</h2>
+        <p>Track and visualize your performance data.</p>
+      </div>
+
+      <div class="dash-card glow">
+        <h2>⚙️ Settings</h2>
+        <p>Manage your system preferences and security.</p>
+      </div>
+
+      <div class="dash-card glow">
+        <h2>💬 Messages</h2>
+        <p>Connect and chat with AI Assistant.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // تأثير تحريك الخلفية
+    const bg = document.getElementById("bg");
+    let hue = 0;
+    setInterval(() => {
+      hue += 1;
+      bg.style.filter = `hue-rotate(${hue}deg)`;
+    }, 50);
+  </script>
+</body>
+</html>
